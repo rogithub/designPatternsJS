@@ -7,4 +7,4 @@ $ node observer.js
 $ node observerInheritance.js
 ```
 
-> **Tip:** Check out the [StackEdit](#StackEdit) for README.md edition.
+> **Tip:** Check out the [StackEdit](https://stackedit.io/editor) for README.md edition.
