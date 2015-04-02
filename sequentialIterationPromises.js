@@ -7,7 +7,7 @@ function print(text) {
 var tasks = [
     function (val) { print ('step ' + val); return val + 1; },
     function (val) { print ('step ' + val); return val + 1; },
-    function (val) { print ('step ' + val); return val + 1; }
+    function (val) { throw new Error('Error at step ' + val); }
 ];
 
 var sequential = function (tasks, initialVal) {
@@ -20,4 +20,12 @@ var sequential = function (tasks, initialVal) {
 }
 
 
-sequential(tasks, 1);
+var promise = sequential(tasks, 1);
+
+promise.then(function() {
+    console.log('Success!');
+}); 
+
+promise.fail(function(err) {
+    console.log(err.message);
+}); 
