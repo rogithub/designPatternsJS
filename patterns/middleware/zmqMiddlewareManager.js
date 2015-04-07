@@ -35,7 +35,7 @@ ZmqMiddlewareManager.prototype.executeMiddleware = function(middleware, arg, fin
         middleware[index].call(self, arg, function(err) {
             if(err) {
                 console.log('There was an error: ' + err.message);
-            ￼￼￼￼￼}
+            }
             
             iterator(++index);
         });
